@@ -119,7 +119,7 @@ if {[info exists synopsys_program_name]} {
 	read_power_intent ../../syn/outputs/ORCA_TOP.genus.upf -1801
 	commit_power_intent
 	#Edit box when you reduce fp size
-	modifyPowerDomainAttr PD_RISC_CORE -box 580 0 1000 400
+	modifyPowerDomainAttr PD_RISC_CORE -box 505 10 810 265
 
 	setNanoRouteMode -drouteEndIteration 10
 	set cts_clks [get_clocks {SDRAM_CLK SYS_2x_CLK SYS_CLK PCI_CLK} ]
@@ -142,6 +142,7 @@ if {[info exists synopsys_program_name]} {
         setOptMode -usefulSkewPostRoute false
         setOptMode -usefulSkewPreCTS false
     
+if {![info exists flow]} {
         #Cadence method.  Not floating with these statements
         setPinAssignMode -pinEditInBatch true
         set all_ports [ get_ports * ]
@@ -150,7 +151,8 @@ if {[info exists synopsys_program_name]} {
         set ports1 [ range_collection $all_ports 0 [expr $num_ports / 2 ] ]
         set ports2 [ range_collection $all_ports [expr ($num_ports / 2 ) + 1 ]  [ expr $num_ports - 1 ]  ]
         # put the two collections on to two layers of ports
-        editPin -edge 3 -pin [get_attribute $ports1 full_name ] -layer M6 -spreadDirection counterclockwise -spreadType START -offsetStart 500 -spacing 1 -unit MICRON -fixedPin 1 
-        editPin -edge 3 -pin [get_attribute $ports2 full_name ] -layer M8 -spreadDirection counterclockwise -spreadType START -offsetStart 500 -spacing 1 -unit MICRON -fixedPin 1 
+        editPin -edge 3 -pin [get_attribute $ports1 full_name ] -layer M6 -spreadDirection counterclockwise -spreadType START -offsetStart 450 -spacing 1 -unit MICRON -fixedPin 1 
+        editPin -edge 3 -pin [get_attribute $ports2 full_name ] -layer M8 -spreadDirection counterclockwise -spreadType START -offsetStart 450 -spacing 1 -unit MICRON -fixedPin 1 
         setPinAssignMode -pinEditInBatch false
-}
+	}
+        }

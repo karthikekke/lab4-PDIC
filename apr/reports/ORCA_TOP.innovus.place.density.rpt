@@ -1,0 +1,22 @@
+
+powerDomain PD_ORCA_TOP: bins with density > 0.750 = 30.09 % ( 621 / 2064 )
+bin size: 110 sites by 10 row(s). total 2064 bins ( 48 by 43 )
+  density range     #bins    %
+  (0.750 - 0.800]     130   6.30
+  (0.800 - 0.850]      18   0.87
+  (0.850 - 0.900]      33   1.60
+  (0.900 - 0.950]      18   0.87
+  (0.950 - 1.000]     422  20.45
+  total               621  30.09
+
+powerDomain PD_RISC_CORE: bins with density > 0.750 = 53.95 % ( 164 / 304 )
+bin size: 110 sites by 10 row(s). total 304 bins ( 19 by 16 )
+  density range     #bins    %
+  (0.750 - 0.800]       4   1.32
+  (0.800 - 0.850]       2   0.66
+  (0.850 - 0.900]      23   7.57
+  (0.900 - 0.950]       9   2.96
+  (0.950 - 1.000]     126  41.45
+  total               164  53.95
+
+Density distribution unevenness ratio = 16.707%

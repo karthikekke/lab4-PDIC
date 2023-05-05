@@ -3,7 +3,7 @@
 # If IOs
 #floorPlan -s [lindex $design_size 0 ] [lindex $design_size 1 ] 10 10 10 10 -flip s -coreMarginsBy io
 
-defIn "../outputs/${top_design}.floorplan.innovus.macros.def" 
+defIn "../outputs/${top_design}.floorplan.innovus.lab3.def" 
 
 add_tracks -honor_pitch
 
