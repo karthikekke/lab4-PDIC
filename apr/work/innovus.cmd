@@ -172,3 +172,10 @@ report_timing -path_group reg2reg -path_type full_clock -net -early
 report_timing -path_group reg2reg -path_type full_clock -net 
 report_timing -path_group reg2reg -path_type full_clock -net
 report_timing -path_group reg2reg -path_type full_clock -net -early
+ctd_win -id ctd_window
+report_clock_timing -type summary 
+report_clock_timing -type summary -early 
+help early
+man early
+man -early
+report_timing

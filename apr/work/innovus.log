@@ -11570,3 +11570,441 @@ Start delay calculation (fullDC) (1 T). (MEM=2429.65)
 Total number of fetched objects 55212
 End delay calculation. (MEM=2449.66 CPU=0:00:11.5 REAL=0:00:12.0)
 End delay calculation (fullDC). (MEM=2449.66 CPU=0:00:15.8 REAL=0:00:16.0)
+Path 1: MET Hold Check with Pin I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_RAM_0/CE1 
+Endpoint:   I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_RAM_0/I1[4] (v) checked with  leading edge of 'SDRAM_CLK'
+Beginpoint: I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_4_/Q           (v) triggered by  leading edge of 'SDRAM_CLK'
+Path Groups: {reg2reg}
+Analysis View: func_best_scenario
+Other End Arrival Time          0.231
++ Hold                          0.048
++ Phase Shift                   0.000
+- CPPR Adjustment               0.000
+= Required Time                 0.279
+  Arrival Time                  0.281
+  Slack Time                    0.002
+     Clock Rise Edge                      0.000
+     + Drive Adjustment                   0.007
+     = Beginpoint Arrival Time            0.007
+     Timing Path:
+      --------------------------------------------------------------------------------------------------  
+       Delay     Arrival    Slew      Load    Fanout   Cell              Pin                              
+                 Time                                                                                     
+      --------------------------------------------------------------------------------------------------  
+                0.007      0.011     12.793  2                          sdram_clk
+      0.001     0.008      0.011     12.793  2        CGLNPRX8_LVT      occ_int2/fast_clk_1_clkgt/u_icg/CLK
+      0.058     0.066      0.022     17.732           CGLNPRX8_LVT      occ_int2/fast_clk_1_clkgt/u_icg/GCLK
+      0.002     0.068      0.022     17.732  1        AO21X2_LVT        occ_int2/U2/A1
+      0.038     0.105      0.023     9.289            AO21X2_LVT        occ_int2/U2/Y
+      0.000     0.105      0.023     9.289   4        NBUFFX2_LVT       CTS_ccl_buf_00215/A
+      0.024     0.129      0.022     10.048           NBUFFX2_LVT       CTS_ccl_buf_00215/Y
+      0.000     0.130      0.022     10.048  1        NBUFFX16_LVT      CTS_ccl_a_buf_00213/A
+      0.025     0.155      0.020     45.735           NBUFFX16_LVT      CTS_ccl_a_buf_00213/Y
+      0.008     0.163      0.023     45.735  2        NBUFFX32_LVT      I_SDRAM_TOP/CTS_ccl_a_buf_00208/A
+      0.025     0.188      0.022     114.841          NBUFFX32_LVT      I_SDRAM_TOP/CTS_ccl_a_buf_00208/Y
+      0.028     0.215      0.057     114.841 93       SDFFX1_LVT        I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_4_/CLK
+      0.070     0.285      0.027     4.917            SDFFX1_LVT        I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_4_/Q
+      -0.004    0.281      0.034     4.917   2        SRAM2RW64x32      I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_RAM_0/I1[4]
+      --------------------------------------------------------------------------------------------------
+     Clock Rise Edge                      0.000
+     + Drive Adjustment                   0.007
+     = Beginpoint Arrival Time            0.007
+     Other End Path:
+      --------------------------------------------------------------------------------------------------  
+       Delay     Arrival    Slew      Load    Fanout   Cell              Pin                              
+                 Time                                                                                     
+      --------------------------------------------------------------------------------------------------  
+                0.007      0.011     12.974  2                          sdram_clk
+      0.001     0.008      0.011     12.974  2        CGLNPRX8_LVT      occ_int2/fast_clk_1_clkgt/u_icg/CLK
+      0.058     0.066      0.022     17.934           CGLNPRX8_LVT      occ_int2/fast_clk_1_clkgt/u_icg/GCLK
+      0.002     0.068      0.022     17.934  1        AO21X2_LVT        occ_int2/U2/A1
+      0.038     0.106      0.028     9.718            AO21X2_LVT        occ_int2/U2/Y
+      0.000     0.106      0.028     9.718   4        NBUFFX2_LVT       CTS_ccl_buf_00215/A
+      0.024     0.130      0.022     10.509           NBUFFX2_LVT       CTS_ccl_buf_00215/Y
+      0.001     0.131      0.022     10.509  1        NBUFFX16_LVT      CTS_ccl_a_buf_00213/A
+      0.025     0.157      0.021     47.325           NBUFFX16_LVT      CTS_ccl_a_buf_00213/Y
+      0.008     0.165      0.023     47.325  2        NBUFFX32_LVT      I_SDRAM_TOP/CTS_ccl_a_buf_00208/A
+      0.025     0.190      0.022     126.723          NBUFFX32_LVT      I_SDRAM_TOP/CTS_ccl_a_buf_00208/Y
+      0.041     0.231      0.154     126.723 93       SRAM2RW64x32      I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_RAM_0/CE1
+      --------------------------------------------------------------------------------------------------
+
+<CMD> ctd_win -id ctd_window
+<CMD> report_clock_timing -type summary 
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: ORCA_TOP
+# Design Mode: 28nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Start delay calculation (fullDC) (1 T). (MEM=2429.65)
+Total number of fetched objects 55212
+End delay calculation. (MEM=2449.66 CPU=0:00:11.6 REAL=0:00:12.0)
+End delay calculation (fullDC). (MEM=2449.66 CPU=0:00:16.0 REAL=0:00:16.0)
+
+  Clock: PCI_CLK
+  Analysis View: test_worst_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Maximum launch latency: 
+            	     0.927	          	r    I_PCI_TOP/I_PCI_CORE_mega_shift_reg_8__26_/CLK
+
+  Minimum capture latency: 
+            	     0.749	          	r    occ_int2/U_clk_control_i_2/U_cycle_ctr_i/tercnt_n_reg_reg/CLK
+
+  Maximum skew: 
+            	     0.926	          	r    I_PCI_TOP/I_PCI_CORE_mega_shift_reg_9__4_/CLK
+       0.050	     0.851	    -0.025	r    I_PCI_TOP/I_PCI_CORE_mega_shift_reg_3__24_/CLK
+
+  Clock: PCI_CLK
+  Analysis View: func_worst_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Maximum launch latency: 
+            	     0.927	          	r    I_PCI_TOP/I_PCI_CORE_mega_shift_reg_8__26_/CLK
+
+  Minimum capture latency: 
+            	     0.749	          	r    occ_int2/U_clk_control_i_2/U_cycle_ctr_i/tercnt_n_reg_reg/CLK
+
+  Maximum skew: 
+            	     0.926	          	r    I_PCI_TOP/I_PCI_CORE_mega_shift_reg_9__4_/CLK
+       0.050	     0.851	    -0.025	r    I_PCI_TOP/I_PCI_CORE_mega_shift_reg_3__24_/CLK
+
+  Clock: SYS_2x_CLK
+  Analysis View: func_worst_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Maximum launch latency: 
+            	     1.432	          	r    I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_12_/CLK
+
+  Minimum capture latency: 
+            	     0.024	          	r    I_CLOCKING/sys_clk_in_reg/CLK
+
+  Maximum skew: 
+            	     1.429	          	r    I_RISC_CORE/I_ALU_Lachd_Result_reg_9_/CLK
+       0.094	     1.304	    -0.031	r    I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/CE1
+
+  Clock: ate_clk
+  Analysis View: test_worst_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Maximum launch latency: 
+            	     1.347	          	f    I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_40__11_/CLK
+
+  Minimum capture latency: 
+            	     0.972	          	r    I_CLOCKING/pci_rst_n_buf_reg/CLK
+
+  Maximum skew: 
+            	     1.143	          	r    I_BLENDER_1/R_616/CLK
+       0.163	     0.975	    -0.005	r    I_PARSER/out_bus_reg_8_/CLK
+
+  Clock: SDRAM_CLK
+  Analysis View: func_worst_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Maximum launch latency: 
+            	     1.342	          	f    I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_40__11_/CLK
+
+  Minimum capture latency: 
+            	     0.956	          	r    occ_int2/U_clk_control_i_1/pipeline_or_tree_l_reg/CLK
+
+  Maximum skew: 
+            	     1.205	          	f    I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_24_/CLK
+       0.159	     1.042	    -0.005	r    I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_RAM_1/CE1
+
+  Clock: SYS_CLK
+  Analysis View: test_worst_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Maximum launch latency: 
+            	     1.480	          	r    I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE1
+
+  Minimum capture latency: 
+            	     1.274	          	r    I_PARSER/out_bus_reg_8_/CLK
+
+  Maximum skew: 
+            	     1.459	          	r    I_BLENDER_1/R_616/CLK
+       0.163	     1.274	    -0.021	r    I_PARSER/out_bus_reg_8_/CLK
+
+  Clock: SYS_2x_CLK
+  Analysis View: test_worst_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Maximum launch latency: 
+            	     1.432	          	r    I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_12_/CLK
+
+  Minimum capture latency: 
+            	     0.024	          	r    I_CLOCKING/sys_clk_in_reg/CLK
+
+  Maximum skew: 
+            	     1.429	          	r    I_RISC_CORE/I_ALU_Lachd_Result_reg_9_/CLK
+       0.094	     1.304	    -0.031	r    I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/CE1
+
+  Clock: SYS_CLK
+  Analysis View: func_worst_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Maximum launch latency: 
+            	     1.480	          	r    I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE1
+
+  Minimum capture latency: 
+            	     1.274	          	r    I_PARSER/out_bus_reg_8_/CLK
+
+  Maximum skew: 
+            	     1.459	          	r    I_BLENDER_1/R_616/CLK
+       0.163	     1.274	    -0.021	r    I_PARSER/out_bus_reg_8_/CLK
+
+  Clock: SDRAM_CLK
+  Analysis View: test_worst_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Maximum launch latency: 
+            	     1.344	          	f    I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_40__11_/CLK
+
+  Minimum capture latency: 
+            	     0.956	          	r    occ_int2/U_clk_control_i_1/pipeline_or_tree_l_reg/CLK
+
+  Maximum skew: 
+            	     1.207	          	f    I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_24_/CLK
+       0.161	     1.042	    -0.005	r    I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_RAM_1/CE1
+
+<CMD> report_clock_timing -type summary -early 
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: ORCA_TOP
+# Design Mode: 28nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate late delays in OCV mode...
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Calculate early delays in OCV mode...
+Start delay calculation (fullDC) (1 T). (MEM=2431.65)
+Total number of fetched objects 55212
+End delay calculation. (MEM=2451.66 CPU=0:00:11.4 REAL=0:00:11.0)
+End delay calculation (fullDC). (MEM=2451.66 CPU=0:00:15.9 REAL=0:00:15.0)
+
+  Clock: PCI_CLK
+  Analysis View: test_best_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Minimum launch latency: 
+            	     0.136	          	r    occ_int2/U_clk_control_i_2/load_n_meta_1_l_reg/CLK
+
+  Maximum capture latency: 
+            	     0.208	          	r    I_PCI_TOP/I_PCI_CORE_mega_shift_reg_8__25_/CLK
+
+  Maximum skew: 
+            	     0.142	          	r    I_CLOCKING/pci_rst_n_buf_reg/CLK
+       0.064	     0.208	     0.001	r    I_PCI_TOP/I_PCI_CORE_mega_shift_reg_8__25_/CLK
+
+  Clock: SYS_2x_CLK
+  Analysis View: test_best_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Minimum launch latency: 
+            	     0.004	          	r    I_CLOCKING/sys_clk_in_reg/CLK
+
+  Maximum capture latency: 
+            	     0.348	          	r    I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_15_/CLK
+
+  Maximum skew: 
+            	     0.255	          	r    I_CLOCKING/sys_2x_rst_n_buf_reg/CLK
+       0.068	     0.325	     0.002	r    I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_7_/CLK
+
+  Clock: SYS_2x_CLK
+  Analysis View: func_best_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Minimum launch latency: 
+            	     0.004	          	r    I_CLOCKING/sys_clk_in_reg/CLK
+
+  Maximum capture latency: 
+            	     0.348	          	r    I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_15_/CLK
+
+  Maximum skew: 
+            	     0.255	          	r    I_CLOCKING/sys_2x_rst_n_buf_reg/CLK
+       0.070	     0.325	     0.000	r    I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_7_/CLK
+
+  Clock: PCI_CLK
+  Analysis View: func_best_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Minimum launch latency: 
+            	     0.136	          	r    occ_int2/U_clk_control_i_2/load_n_meta_1_l_reg/CLK
+
+  Maximum capture latency: 
+            	     0.208	          	r    I_PCI_TOP/I_PCI_CORE_mega_shift_reg_8__25_/CLK
+
+  Maximum skew: 
+            	     0.142	          	r    I_CLOCKING/pci_rst_n_buf_reg/CLK
+       0.065	     0.208	     0.000	r    I_PCI_TOP/I_PCI_CORE_mega_shift_reg_8__25_/CLK
+
+  Clock: SYS_CLK
+  Analysis View: test_best_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Minimum launch latency: 
+            	     0.241	          	r    I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/CLK
+
+  Maximum capture latency: 
+            	     0.345	          	r    I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE1
+
+  Maximum skew: 
+            	     0.272	          	r    I_PARSER/pci_w_mux_select_reg_0_/CLK
+       0.071	     0.345	     0.002	r    I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE1
+
+  Clock: ate_clk
+  Analysis View: test_best_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Minimum launch latency: 
+            	     0.188	          	r    I_CLOCKING/prst_ff_reg/CLK
+
+  Maximum capture latency: 
+            	     0.303	          	r    I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_15_/CLK
+
+  Maximum skew: 
+            	     0.201	          	r    I_PARSER/out_bus_reg_8_/CLK
+       0.089	     0.290	     0.000	r    I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_8_/CLK
+
+  Clock: SDRAM_CLK
+  Analysis View: test_best_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Minimum launch latency: 
+            	     0.171	          	r    occ_int2/U_clk_control_i_1/pipeline_or_tree_l_reg/CLK
+
+  Maximum capture latency: 
+            	     0.236	          	f    I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_40__7_/CLK
+
+  Maximum skew: 
+            	     0.194	          	r    I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/CE2
+       0.042	     0.236	     0.000	f    I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_40__7_/CLK
+
+  Clock: SDRAM_CLK
+  Analysis View: func_best_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Minimum launch latency: 
+            	     0.171	          	r    occ_int2/U_clk_control_i_1/pipeline_or_tree_l_reg/CLK
+
+  Maximum capture latency: 
+            	     0.236	          	f    I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_40__7_/CLK
+
+  Maximum skew: 
+            	     0.194	          	r    I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/CE2
+       0.043	     0.236	     0.000	f    I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_40__7_/CLK
+
+  Clock: SYS_CLK
+  Analysis View: func_best_scenario
+
+        Skew	   Latency	      CPPR	     Clock Pin
+---------------------------------------------------------------------------
+
+  Minimum launch latency: 
+            	     0.241	          	r    I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/CLK
+
+  Maximum capture latency: 
+            	     0.345	          	r    I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE1
+
+  Maximum skew: 
+            	     0.272	          	r    I_PARSER/pci_w_mux_select_reg_0_/CLK
+       0.072	     0.345	     0.000	r    I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE1
+
+<CMD> help early
+No help is available for 'early'.
+      You might have typed the command name incorrectly
+      (command names are case sensitive), or this is an
+      unknown or unsupported command.
+
+<CMD> man early
+<CMD> man -early
+<CMD> report_timing
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: ORCA_TOP
+# Design Mode: 28nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Start delay calculation (fullDC) (1 T). (MEM=2431.65)
+Total number of fetched objects 55212
+End delay calculation. (MEM=2451.66 CPU=0:00:12.1 REAL=0:00:12.0)
+End delay calculation (fullDC). (MEM=2451.66 CPU=0:00:16.7 REAL=0:00:16.0)
+Path 1: VIOLATED Clock Gating Setup Check with Pin occ_int2/fast_clk_0_clkgt/u_icg/CLK 
+Endpoint:   occ_int2/fast_clk_0_clkgt/u_icg/EN                 (v) checked with trailing edge of 'SYS_2x_CLK'
+Beginpoint: occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/Q (v) triggered by  leading edge of 'SYS_2x_CLK'
+Path Groups: {reg2cgate}
+Analysis View: test_worst_scenario
+Other End Arrival Time          1.713
+- Clock Gating Setup            0.170
++ Phase Shift                   0.000
++ CPPR Adjustment               0.001
+- Uncertainty                   0.100
+= Required Time                 1.444
+- Arrival Time                  1.762
+= Slack Time                   -0.318
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Prop)  1.330
+     = Beginpoint Arrival Time       1.330
+      --------------------------------------------------------------------------------------------------  
+       Delay     Arrival    Slew      Load    Fanout   Cell              Pin                              
+                 Time                                                                                     
+      --------------------------------------------------------------------------------------------------  
+                1.330      0.176     31.726  8                          occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK
+      0.288     1.618      0.043     1.482   1        DFFARX1_LVT       occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/Q
+      0.144     1.762      0.053     2.330   1        AO21X1_LVT        occ_int2/U_gf_mux_0/FE_RC_401_0/Y
+      0.000     1.762      0.053     2.330            CGLNPRX8_LVT      occ_int2/fast_clk_0_clkgt/u_icg/EN
+      --------------------------------------------------------------------------------------------------
+
+
+*** Memory Usage v#1 (Current mem = 2405.656M, initial mem = 297.684M) ***
+*** Message Summary: 22389 warning(s), 25 error(s)
+
+--- Ending "Innovus" (totcpu=1:47:55, real=6:17:00, mem=2405.7M) ---
